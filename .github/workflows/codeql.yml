@@ -67,6 +67,10 @@ jobs:
     # - name: Setup runtime (example)
     #   uses: actions/setup-example@v1
 
+       # Add this step to install libsodium
+    - name: Install libsodium
+      run: sudo apt-get install -y libsodium-dev
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
